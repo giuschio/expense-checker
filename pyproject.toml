@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Expense-Checker"
+version = "1.0.0"
+authors = [{ name = "Giulio Schiavi", email = "giuschio98@gmail.com" }]
+description = "A Python package to categorize and manage expenses from Excel files"
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "pandas>=1.0",
+    "openpyxl>=3.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/giuschio/expense-checker"
+
+[tool.setuptools]
+packages = ["expense_checker"]
+package-dir = {"" = "src"}
+
+
+
+[project.optional-dependencies]
+dev = ["pytest", "flake8"]
